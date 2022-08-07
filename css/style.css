@@ -1,0 +1,668 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.welcome .navigation a {
+  font-weight: 400;
+  color: #1F1534;
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: 40px;
+}
+
+.check-articles .view-all a, .download a, .leading a, .services .learn-more a, .consult a {
+  color: #458FF6;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 60px;
+  border: 2px solid #458FF6;
+  border-radius: 32px;
+  text-decoration: none;
+  padding: 19px 51px;
+}
+
+.check-articles h3::after, .customer-saying h3::after, .download h3::after, .leading h3::after, .services .head h2::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 56px;
+  height: 2px;
+  background: #000000;
+  border-radius: 5px;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1220px;
+  margin: auto;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+}
+.welcome .navigation .home {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-left: 0;
+}
+.welcome .navigation a {
+  text-decoration: none;
+  position: relative;
+}
+.welcome .navigation a:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #458FF6;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.welcome .navigation a:hover::after, .welcome .navigation a:focus::after {
+  width: 100%;
+}
+.welcome .nav-bar-menu {
+  display: none;
+}
+
+.position {
+  position: relative;
+}
+.position .con-today {
+  position: absolute;
+  left: -240px;
+  top: 82px;
+}
+.position .serv {
+  position: absolute;
+  right: -23px;
+  top: 553px;
+  z-index: -1;
+}
+.position .down-lead {
+  position: absolute;
+  right: -236px;
+  top: 472px;
+}
+.position .first-say {
+  position: absolute;
+  left: 0;
+  top: 320px;
+  z-index: -1;
+}
+.position .second-say {
+  position: absolute;
+  right: 0;
+  top: -18px;
+}
+.position .article-points {
+  position: absolute;
+  top: 125px;
+  left: -20px;
+  z-index: -1;
+}
+.position .first-footer {
+  position: absolute;
+  left: -365px;
+  bottom: -18px;
+}
+.position .second-footer {
+  position: absolute;
+  right: -120px;
+  bottom: -46px;
+  z-index: -1;
+}
+
+.consult {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 84px;
+}
+.consult h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+}
+.consult p {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 32px;
+  padding: 35px 0;
+  color: #7D7987;
+}
+.consult a {
+  background: #458FF6;
+  border-radius: 55px;
+  color: #FFFFFF;
+}
+.consult a:hover {
+  background: #FFFFFF;
+  color: #5A98F2;
+}
+
+.services {
+  padding-top: 190px;
+  padding-bottom: 220px;
+  background: url(../images/services-bg.svg) no-repeat -7% 43%;
+}
+.services .head {
+  text-align: center;
+  padding-bottom: 80px;
+}
+.services .head h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+}
+.services .head h2::after {
+  margin-top: 26px;
+  margin-bottom: 33px;
+}
+.services .head p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+.services .pages {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.services .page {
+  width: 266px;
+  padding: 54px 45px 47px 39px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  margin-bottom: 37px;
+}
+.services .page h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  padding-top: 22px;
+}
+.services .page p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+}
+.services .learn-more {
+  text-align: center;
+  padding-top: 35px;
+}
+.services .learn-more a:hover {
+  background-color: #458FF6;
+  color: #FFFFFF;
+}
+
+.leading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 220px;
+}
+.leading > div {
+  width: 40%;
+}
+.leading h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+}
+.leading h3::after {
+  margin: 0;
+  margin: 26px 0 31px;
+}
+.leading p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7D7987;
+  padding-bottom: 37px;
+}
+.leading a:hover {
+  background-color: #458FF6;
+  color: #FFFFFF;
+}
+
+.download {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 260px;
+}
+.download .download-a {
+  padding-left: 90px;
+}
+.download h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+}
+.download h3::after {
+  margin: 0;
+  margin: 30px 0 31px;
+}
+.download p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7D7987;
+  padding-bottom: 40px;
+}
+.download a:hover {
+  background-color: #458FF6;
+  color: #FFFFFF;
+}
+.download a:hover path {
+  fill: #FFFFFF;
+}
+.download a svg {
+  padding-left: 14px;
+}
+
+.customer-saying {
+  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+  border-radius: 24px;
+  max-width: 1120px;
+  margin: 0 auto 240px;
+}
+.customer-saying h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 64px 0 104px;
+}
+.customer-saying h3::after {
+  margin-top: 25px;
+  background: #FFFFFF;
+}
+.customer-saying .saying {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 89px;
+}
+.customer-saying .saying-img {
+  display: flex;
+  align-items: center;
+}
+.customer-saying .saying-img > div {
+  padding-left: 29px;
+}
+.customer-saying .saying-img h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 48px;
+  color: #FFFFFF;
+}
+.customer-saying .saying-img p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 48px;
+  color: rgba(255, 255, 255, 0.85);
+}
+.customer-saying .saying-text p {
+  width: 420px;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.check-articles {
+  background: url(../images/next-bg.svg) no-repeat 125% 0%;
+}
+.check-articles h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  text-align: center;
+}
+.check-articles h3::after {
+  margin-top: 32px;
+  margin-bottom: 79px;
+}
+.check-articles .view-all {
+  padding-top: 69px;
+  text-align: center;
+  padding-bottom: 201px;
+}
+.check-articles .view-all a:hover {
+  background-color: #458FF6;
+  color: #FFFFFF;
+}
+.check-articles .articles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.check-articles .article {
+  width: 350px;
+  background: #FFFFFF;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  border-radius: 20px;
+}
+.check-articles .article h3 {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 32px;
+  text-align: start;
+  padding: 24px 0 12px;
+  padding-left: 33px;
+  padding-right: 51px;
+}
+.check-articles .article h3::after {
+  content: none;
+}
+.check-articles .article p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #7D7987;
+  padding-bottom: 25px;
+  padding-left: 33px;
+  padding-right: 51px;
+}
+.check-articles .article a {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  color: #4089ED;
+  text-decoration: none;
+  padding-left: 33px;
+  padding-bottom: 35px;
+  display: block;
+}
+.check-articles .article a img {
+  padding-left: 15px;
+}
+
+footer {
+  background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+  overflow: hidden;
+}
+footer .trafalgar-footer {
+  padding-right: 8px;
+}
+footer .trafalgar-footer p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+footer .trafalgar-footer p:first-of-type {
+  padding: 17px 0 31px;
+}
+footer .all-footer {
+  padding: 109px 0;
+  display: flex;
+}
+footer .different {
+  display: flex;
+}
+footer .different .different-with-smth {
+  padding-left: 140px;
+}
+footer .different h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 60px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+footer .different a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 38px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 1245px) {
+  .container {
+    max-width: 95%;
+  }
+}
+@media (max-width: 1200px) {
+  .consult {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .consult img {
+    padding-top: 40px;
+  }
+  .services {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .leading {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-bottom: 160px;
+  }
+  .leading > div {
+    width: 100%;
+  }
+  .leading img {
+    padding-bottom: 40px;
+  }
+  .leading h3::after {
+    margin: 30px auto 31px;
+  }
+  .download {
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 200px;
+    justify-content: center;
+  }
+  .download img {
+    padding-top: 40px;
+  }
+  .download h3::after {
+    margin: 30px auto 31px;
+  }
+  .download .download-a {
+    padding: 0;
+  }
+  .customer-saying {
+    margin: 0 auto 170px;
+  }
+  .check-articles .view-all {
+    padding: 49px 0 150px;
+  }
+}
+@media (max-width: 1130px) {
+  .services .page {
+    margin-right: 15px;
+    width: 40%;
+  }
+  .check-articles .article {
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 1042px) {
+  .services .page {
+    margin-right: 15px;
+    width: 80%;
+  }
+}
+@media (max-width: 935px) {
+  footer .all-footer {
+    flex-wrap: wrap;
+  }
+  footer .trafalgar-footer {
+    width: 90%;
+  }
+  footer .different {
+    display: block;
+  }
+  footer .different .different-with-smth {
+    padding-left: 0%;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .customer-saying .saying {
+    text-align: center;
+  }
+  .customer-saying .saying-text p {
+    width: 90%;
+    padding: 30px 0 0;
+    margin: auto;
+  }
+  .customer-saying .saying-img > div {
+    text-align: left;
+  }
+}
+@media (max-width: 800px) {
+  .welcome .navigation {
+    display: none;
+  }
+  .welcome .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .welcome .dropdown-content a {
+    color: black;
+    padding: 18px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .welcome .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .welcome .dropdown-content p {
+    margin-bottom: 0;
+  }
+  .welcome .nav-bar-menu {
+    display: flex;
+  }
+  .welcome .nav-bar-menu img {
+    max-width: 51px;
+    height: 50px;
+  }
+  .welcome .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .welcome .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .welcome .dropdown .dropbtn {
+    background-color: #FFFFFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media (max-width: 750px) {
+  .check-articles .article {
+    margin-right: 15px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 710px) {
+  .consult .healthcare-img img {
+    display: none;
+  }
+  .check-articles .article {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 675px) {
+  .leading .download-a img,
+.download .download-a img {
+    display: inline-block;
+  }
+  .leading img,
+.download img {
+    display: none;
+  }
+  .download {
+    padding-bottom: 140px;
+  }
+}
+@media (max-width: 460px) {
+  .customer-saying h3 {
+    padding: 40px 0 50px;
+  }
+  .customer-saying .saying {
+    padding-bottom: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
